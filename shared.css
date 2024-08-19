@@ -16,8 +16,13 @@ nav {
     /* border-radius: 5px; */
     color: var(--second-color);
     border-bottom: 2px solid var(--second-color);
-    transform: scaleX(1);
-    text-decoration: wavy;
+
+    transform: scaleX(1) ease-in-out 5s;
+    /* text-decoration: wavy; */
+  }
+
+  nav a.active {
+    color: var(--active-color);
   }
 
   :root {
@@ -26,6 +31,7 @@ nav {
     --padding: 20px;
     --normal-text-size: 16px;
     --second-color: #03afed;
+    --active-color: pink;
   }
 
   ul {

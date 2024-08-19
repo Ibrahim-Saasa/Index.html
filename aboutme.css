@@ -20,9 +20,9 @@ html,body,.page-container{
  
   .main {
     margin-top: 60px;
-flex-grow: 2;
+    flex-grow: 2;
     display: flex;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     flex-direction: column;
     align-items: center;
     
@@ -67,7 +67,9 @@ flex-grow: 2;
     padding: 12px 48px;
     border-radius: 5px;
     border: none;
+    margin-bottom: -75px;
   }
+ 
   .light-btn {
     background-color: var(--second-color);
     color: var(--main-font-color);
@@ -92,6 +94,20 @@ flex-grow: 2;
     background-color: var(--second-color);
     color: var(--main-color);
   }
+  .dark-btn:active {
+    color:rgb(218, 85, 85)
+  }
+  
+  hr {
+    border-color : var(--second-color);
+    margin-bottom: 75px;
+    
+  }
+
+  .last {
+    margin-top: 75px;
+  }
+
   @keyframes move {
     form {
       border: 2px solid rgb(195, 255, 0);
