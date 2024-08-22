@@ -16,8 +16,8 @@ body {
   }
   .img{
     order: 2;
-    height: 743px;
-    width: 546px;
+    height: auto;
+    width: auto;
   }
 
   .text-main{
@@ -55,10 +55,6 @@ body {
   .img {
     padding-left: 163px;
     
-  }
-
-  section{
-    /* border:5px inset white; */
   }
 
   footer{
@@ -152,4 +148,11 @@ h3 {
   .page-container {
     padding: 0 3%;
   }
+}
+
+hr {
+  border-color : var(--second-color);
+  margin-top: 75px;
+  margin-bottom: 15px;
+  
 }
