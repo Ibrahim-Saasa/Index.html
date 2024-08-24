@@ -7,8 +7,7 @@ nav {
     border: 2px solid rgba(72, 0, 255, 0.014) ;
     z-index: 1;
     display: flex;
-    padding: 30px 0;
-    
+    padding: 30px 142px;
   }
 
   nav a:hover {
@@ -31,7 +30,7 @@ nav {
     --padding: 20px;
     --normal-text-size: 16px;
     --second-color: #03afed;
-    --active-color: pink;
+    --active-color: rgb(192, 246, 255);
   }
 
   ul {
