@@ -12,12 +12,10 @@ nav {
 
   nav a:hover {
     padding: 5px;
-    /* border-radius: 5px; */
+    border-radius: 5px;
     color: var(--second-color);
     border-bottom: 2px solid var(--second-color);
-
     transform: scaleX(1) ease-in-out 5s;
-    /* text-decoration: wavy; */
   }
 
   nav a.active {
