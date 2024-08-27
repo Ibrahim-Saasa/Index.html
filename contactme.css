@@ -12,7 +12,11 @@
 body {
     font-family: "Poppins", sans-serif;
     color: var(--main-font-color);
-    background-color: var(--main-color);
+    background-image: linear-gradient(
+      to bottom,
+      blue,
+      aqua
+    );
   }
 
   .btn-container {
