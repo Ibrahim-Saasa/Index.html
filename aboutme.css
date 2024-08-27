@@ -6,13 +6,17 @@
 body {
   font-family: "Poppins", sans-serif;
   color: var(--main-font-color);
-  background-image: linear-gradient();
-
+  background-image: linear-gradient(
+    to bottom,
+    #009245 ,
+    #FCEE21  
+  );
+  /* height: 50vh; */
 }
 
-html,body,.page-container{
+/* html,body,.page-container{
 height: 100%;
-}
+} */
 
 .page-container {
   padding: 0px 25px;
@@ -43,18 +47,11 @@ height: 100%;
   width: 217px;
   height: 294px;
   flex-shrink: 0;
-  padding-bottom: 64px;
-  padding-top: 64px;
-}
+  /* padding-bottom: 64px;
+  padding-top: 64px; */
+  border: 2px solid yellow;
+  border-radius: 5px;
 
-section{
-  border:5px inset white;
-}
-
-.footer-container{
-  border: 2px solid;
-  /* display: flex;
-  gap: 700px; */
 }
 
 .btn-container {
@@ -71,31 +68,30 @@ section{
 }
 
 .light-btn {
-  background-color: var(--second-color);
+  background-color: #009245;
   color: var(--main-font-color);
   transition: all 2s;
   cursor: pointer;
 }
+
 .light-btn:hover {
-  background-color: var(--main-color);
-  color: var(--second-color);
+  background-color: #FCEE21  ;
+  color: green;
   border: 1px solid var(--second-color);
 }
 
 
 .dark-btn {
-  background-color: var(--main-color);
-  color: var(--second-color);
+  background-color: #FCEE21  ;
+  color: green;
   border: 1px solid var(--second-color);
   transition: all 2s;
   cursor: pointer;
 }
+
 .dark-btn:hover {
-  background-color: var(--second-color);
+  background-color: #009245;
   color: var(--main-color);
-}
-.dark-btn:active {
-  color:rgb(218, 85, 85)
 }
 
 hr {
@@ -126,13 +122,13 @@ hr {
   line-height: 84px;
 }
   .content-role {
-  color: var(--second-color);
+  color: green;
   font-size: 24px;
   line-height: 52px;
   }
 
   h3 {
-  color: var(--second-color);
+  color: green;
 }
   .text-main {
   order: 2;
@@ -148,13 +144,14 @@ hr {
 .margin-top {
   margin-top: 15px;
 }
+
 .circle {
   width: 20px;
   height: 20px;
-
   border-radius: 50%;
-  background-color: var(--second-color);
+  background-color: #009245;
 }
+
 .column {
   width: 1px;
   height: 420px;
@@ -180,9 +177,10 @@ hr {
 
 }
 .exp-text:hover {
- background-color: rgb(111, 170, 191);
+ background-color: lightgreen;
   transform: translateX(-5px);
   /* transform: translateY(-5px); */
+  color: green;
 }
 .exp-role {
   font-size: 24px;
