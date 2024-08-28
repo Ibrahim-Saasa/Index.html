@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Ibrahim Saasa</title>
     <link rel="stylesheet" type="text/css" href="index.css">
     <link rel="stylesheet" type="text/css" href="shared.css">
@@ -12,30 +13,29 @@
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet"
   />
-    
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   </head>
 
   <body> 
         <div class="page-container">
-          
-          <nav class="navbar">
-            <h1 class="head">.Ibrahim Saasa</h1>
-            <ul class="nav-menu">
-            <li class="nav-item"><a href="./index.html">Home</a></li>
-            <li class="nav-item"><a href="./aboutme.html">About Me</a></li>
-            <li class="nav-item"><a href="./mywork.html">Work</a></li>
-            <li class="nav-item"><a href="./contactme.html">Contact</a></li>
-            <li class="nav-item"><a target="_blank" href="./Resume.pdf">Download CV</a></li>
-            </ul>
-
-            <div class="hamburger">
-              <span class="bar"></span>
-              <span class="bar"></span>
-              <span class="bar"></span>
-          </div>
-          </nav>
-        
+          <header>
+            <nav class="navbar">
+                <h1 class="head">.Ibrahim Saasa</h1>
+                <ul class="nav-bar">
+                  <input type="checkbox" id="check">
+                  <span class="menu">
+                    <li class="nav-item"><a href="./index.html">Home</a></li>
+                    <li class="nav-item"><a href="./aboutme.html">About Me</a></li>
+                    <li class="nav-item"><a href="./mywork.html">Work</a></li>
+                    <li class="nav-item"><a href="./contactme.html">Contact</a></li>
+                    <li class="nav-item"><a target="_blank" href="./Resume.pdf">Download CV</a></li>
+                    <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+                  </span>
+                  <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+                </ul>
+            </nav>
+          </header>
             <div class="main">
               <div class="img">
                 <img src="IMS.jpeg" class="me">
