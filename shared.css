@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
+
 nav {
     position: fixed;
     top: 0;
@@ -21,6 +23,20 @@ nav {
   nav a.active {
     color: var(--active-color);
   }
+
+  .hamburger {
+    display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #101010;
+}
 
   :root {
     --main-color: #071e2e;
@@ -63,4 +79,15 @@ nav {
   justify-content: center;
  }
 
- 
+ @media only screen and (max-width: 768px) {}
+
+.head {
+  text-align: left;
+  padding: 0;
+}
+
+body {
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
