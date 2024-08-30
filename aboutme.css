@@ -19,9 +19,10 @@ height: 100%;
 } */
 
 .page-container {
-  padding: 0px 25px;
+  padding: 0px 15px;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .main {
@@ -111,11 +112,9 @@ hr {
 @keyframes move {
   from {
     opacity: 0;
-    /* background-color: navy; */
   }
   to {
     opacity: 1;
-    /* background-color: #071e2e; */
   }
 }
 .content-title {
@@ -168,20 +167,16 @@ hr {
 }
 .exp-item {
   display: flex;
-  
-
   gap: 10px;
 }
 .exp-text{
   text-align: left;
-  /* animation: move 5s ; */
   transition: transform 2s linear;
 
 }
 .exp-text:hover {
  background-color: lightgreen;
   transform: translateX(-5px);
-  /* transform: translateY(-5px); */
   color: green;
 }
 .exp-role {
@@ -190,8 +185,7 @@ hr {
   margin-bottom: 20px;
   font-family: "Poppins";
 }
-.exp-company,
-.exp-doc {
+.exp-company, .exp-doc {
   font-size: 18px;
   line-height: 28px;
   font-weight: 400;
@@ -209,3 +203,35 @@ hr {
   animation: move 5s;
   animation-timing-function: linear;
 }
+
+@media only screen and (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 100;
+    background-image: linear-gradient(
+      to bottom,
+      blue,
+      aqua
+    );
+    transition: all 0.2s ease-in-out;
+  }
+.menu li {
+  margin-top: 40px;
+}
+.menu li a {
+  padding: 10px;
+}
+.open-menu , .close-menu {
+  display: block;
+}
+#check:checked ~ .menu {
+  right: 0;
+}
+ }

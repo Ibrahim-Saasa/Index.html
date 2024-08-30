@@ -1,0 +1,80 @@
+*{
+    padding: 0;
+    margin: 0;
+    }
+body{
+    font-family: "Poppins", sans-serif;
+}
+.banner {
+      background-color: green;
+      color: white;
+      display: flex;
+      padding: 10px;
+      justify-content: space-between;
+}
+.select {
+      background-color: green;
+      border: none;
+      color: white;
+}
+.phone-icon {
+      width: 20px;
+}
+.phone-section {
+      display: flex;
+      gap: 8px;
+}
+.head2{
+    display: flex;
+    /* gap: 75px; */
+    justify-content: space-between;
+    padding: 15px;   
+}
+.save{
+    width: 15px;
+}
+.heart-icon {
+    width: 20px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: rgb(243, 240, 240);
+  }
+  .img-container {
+    width: 290px;
+  }
+  .img-section {
+    position: relative;
+  }
+  .card {
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    border: 2px solid gray;
+  }
+  .card-img {
+    width: 100%;
+    border-radius: 20px;
+  }
+  .account , .cart {
+    justify-content: space-evenly;
+    display: flex;
+    margin-bottom: 15px;
+  }
+.search{
+    border-radius: 5px;
+    background-color: rgb(193, 201, 210);
+    width: 250px;
+    height: 25px;
+}
+@media only screen and (max-width: 640px) {
+      .banner {
+        flex-direction: column;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+      }
+}
