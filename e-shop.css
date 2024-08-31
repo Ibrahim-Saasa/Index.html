@@ -1,9 +1,12 @@
 *{
     padding: 0;
-    margin-bottom: 5px;
+    margin: 0;
 }
 body{
     font-family: "Poppins", sans-serif;
+}
+h1{
+  color: green;
 }
 .banner {
       background-color: green;
@@ -78,6 +81,7 @@ body{
     width: 250px;
     height: 25px;
     border: 0;
+    display: flex;
 }
 .center{
   border: 2px solid pink;
@@ -105,6 +109,11 @@ body{
   border: none;
   color: white;
   background-color: green;
+  cursor: pointer;
+}
+.btn:hover{
+  background-color: grey;
+  cursor: pointer;
 }
 h3{
   margin-left: 50px;
@@ -123,12 +132,19 @@ h3{
   background-color: white;
   margin-left: 50px;
 }
+.add-cart:hover{
+  background-color: grey;
+  cursor: pointer;
+}
 .card-img1{
   width: 150px;
   margin-left: 15px;
 }
 .items{
   display: flex;
+}
+.search-icon{
+  width: 20px;
 }
 @media only screen and (max-width: 640px) {
       .banner {
