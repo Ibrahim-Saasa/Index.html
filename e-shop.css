@@ -86,11 +86,15 @@ h1{
 .center{
   border: 2px solid pink;
   width: 90%;
-  justify-content: center;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   margin-left: 5%;  
   background-color: rgb(255, 226, 231);
   height: 250x;
+}
+.offer{
+  /* border: 2px solid re; */
 }
 .discount{
   color: green;
@@ -145,6 +149,9 @@ h3{
 }
 .search-icon{
   width: 20px;
+}
+.offer{
+  /* justify-content: space-between; */
 }
 @media only screen and (max-width: 640px) {
       .banner {

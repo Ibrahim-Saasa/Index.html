@@ -19,7 +19,46 @@ body {
       aqua
     );
   }
-
+  /* #mod-theme{
+    display: none;
+  }
+  label {
+    width: 100px;
+    height: 33px;
+    background-color: grey;
+    display: block;
+    border-radius: 20px;
+    padding: 3px;
+    position: relative;
+    transition: all 2s linear;
+  }
+  label::after {
+    content: "";
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    background-color: orange;
+    border-radius: 20px;
+  }
+  #mod-theme:checked + label {
+    background-color: rgb(48,45,45);
+  }
+  #mod-theme:checked + label::after {
+    left: 70px;
+    background-color: rgb(133,124,124);
+  }
+  label img{
+    width: 23px;
+    z-index: 100;
+    top: 6px;
+    left: 5px;
+    position: absolute;
+    cursor: pointer;
+  }
+  #moon {
+    left: 74px;
+    top: 5px;
+  } */
   .img{
     order: 2;
     animation: slide-in 2s;
