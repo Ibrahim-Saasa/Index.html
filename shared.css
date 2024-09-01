@@ -139,4 +139,7 @@ display: block;
 #check:checked ~ .menu {
 right: 0;
 }
+.mod-theme {
+  margin-right: 50px;
+}
 }

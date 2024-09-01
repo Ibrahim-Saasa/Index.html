@@ -1,17 +1,11 @@
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
-
-hamburger.addEventListener("click", mobileMenu);
-
-function mobileMenu() {
-    hamburger.classList.toggle("active");
-    navMenu.classList.toggle("active");
-}
-const navLink = document.querySelectorAll(".nav-link");
-
-navLink.forEach(n => n.addEventListener("click", closeMenu));
-
-function closeMenu() {
-    hamburger.classList.remove("active");
-    navMenu.classList.remove("active");
+let checkbox = document.getElementById("mod-theme");
+function changeStyle() {
+  if (checkbox.checked) {
+    // change the style
+    document.body.style.color = "black";
+    document.documentElement.style.setProperty("--main-color", "white");
+  } else {
+    document.body.style.color = "white";
+    document.documentElement.style.setProperty("--main-color", "#071e2e");
+  }
 }
