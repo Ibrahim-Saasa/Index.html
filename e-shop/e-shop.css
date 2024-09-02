@@ -85,7 +85,7 @@ h1{
 }
 .center{
   border: 2px solid pink;
-  width: 90%;
+  width: 1200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -94,7 +94,7 @@ h1{
   height: 250x;
 }
 .offer{
-  /* border: 2px solid re; */
+  margin-left: 5px;
 }
 .discount{
   color: green;
@@ -103,8 +103,7 @@ h1{
   
 }
 .person{
-  margin-top: -110px;
-  /* border: 2px solid red; */
+  margin-right: 50px;
 }
 .btn {
   font-size: 17px;
@@ -144,14 +143,12 @@ h3{
   width: 150px;
   margin-left: 15px;
 }
-.items{
+.items , .items2{
   display: flex;
+  margin-bottom: 20px;
 }
 .search-icon{
   width: 20px;
-}
-.offer{
-  /* justify-content: space-between; */
 }
 @media only screen and (max-width: 640px) {
       .banner {

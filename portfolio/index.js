@@ -3,7 +3,7 @@ function changeStyle() {
   if (checkbox.checked) {
     // change the style
     document.body.style.color = "black";
-    document.documentElement.style.setProperty("--main-color", "white");
+    document.documentElement.style.setProperty("--main-color", "black");
   } else {
     document.body.style.color = "white";
     document.documentElement.style.setProperty("--main-color", "#071e2e");
