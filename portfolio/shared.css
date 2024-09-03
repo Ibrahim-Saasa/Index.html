@@ -27,7 +27,7 @@
   text-decoration: none;
   color:white ;
   text-align: center;
-  transition: 0.15s ease-in-out;
+  /* transition: 0.15s ease-in-out; */
   position: relative;
   text-transform: uppercase;
 }
@@ -41,7 +41,7 @@
 .open-menu {
   top: 50%;
   right: 20px;
-  transform: translateY(-50%);
+  transform: translate(50%);
 }
 .close-menu {
   top: 20px;
@@ -51,13 +51,12 @@
   display: none;
 
 }
-nav a:hover {
+ nav a:hover {
   padding: 5px;
-  border-radius: 5px;
-  color: var(--second-color);
-  border-bottom: 2px solid var(--second-color);
-  transform: scaleX(1) ease-in-out 5s;
-}
+  transform: scale(1) ease-in-out 5s;
+  border-bottom: 2px solid antiquewhite;
+  color: antiquewhite;
+ }
 
 nav a.active {
   color: var(--active-color);

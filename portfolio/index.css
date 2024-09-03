@@ -169,14 +169,14 @@ h3 {
 @media only screen and (max-width: 768px) {
   .main {
     flex-direction: column;
-    display: flex;
+    /* display: flex; */
 }
   .img {
     order: 1;
   }
-  .text-main {
+  /* .text-main {
     order: 2;
-  }
+  } */
   .btn-container {
     order: 3;
   }
@@ -185,6 +185,7 @@ h3 {
   }
   .page-container {
     padding: 0 3%;
+    height: 200vh;
   }
 }
 
