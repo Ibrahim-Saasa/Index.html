@@ -41,7 +41,7 @@
 .open-menu {
   top: 50%;
   right: 20px;
-  transform: translate(50%);
+  /* transform: translate(50%); */
 }
 .close-menu {
   top: 20px;
@@ -52,12 +52,25 @@
 
 }
  nav a:hover {
-  padding: 5px;
   transform: scale(1) ease-in-out 5s;
-  border-bottom: 2px solid antiquewhite;
-  color: antiquewhite;
+  border-bottom: 2px solid lightpink;
  }
-
+/* nav a{
+  position: relative;
+  width: max-content;
+}
+nav a:hover::after{
+  background: linear-gradient(to right, red, orange, yellow, green, blue, purple, pink);
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 100ms;
+}
+/* nav li:hover::after{
+  width: 0;
+} */
 nav a.active {
   color: var(--active-color);
 }

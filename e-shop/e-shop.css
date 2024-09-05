@@ -210,4 +210,31 @@ h3{
         justify-content: center;
         align-items: center;
       }
+      .head2{
+        flex-direction: column;
+        gap: 5px;
+        justify-content: center;
+        align-items: center;
+      }
+      .center{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-right: 15px;
+      }
+      .toggles , .sort-by{
+        flex-direction: column;
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
+      }
+      .sort-by{
+        align-self: center;
+      }
+      .items , .items2  {
+        flex-direction: column;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+      }
 }
