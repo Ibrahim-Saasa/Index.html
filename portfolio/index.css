@@ -63,8 +63,41 @@ body {
     order: 2;
     animation: slide-in 2s;
     animation-timing-function: ease-in;
+    position: relative;
+    height: 200px;
+    width: auto;
   }
+  @property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  }
+.img::after, .img::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), transparent 70%,aqua);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 5px;
+    animation: 3s spin linear infinite;
+  }
+  .img::before{
+    filter: blur(1.5rem);
+    opacity: 0.5;
 
+  }
+  @keyframes spin{
+    from{
+      --angle:0deg;
+    }
+    to{
+      --angle:360deg;
+    }
+  }
   @keyframes slide-in {
     from{
       transform: translateY(-100%);
@@ -77,9 +110,10 @@ body {
   .me{
     height: 200px;
     width: auto;
-    border: 2px solid aqua;
-
+    /* border: 2px solid aqua; */
+    /* position: relative; */
   }
+  
 
   .text-main{
     order: 1;
@@ -173,6 +207,7 @@ h3 {
 }
   .img {
     order: 1;
+    width: 150px;
   }
   /* .text-main {
     order: 2;
@@ -185,7 +220,7 @@ h3 {
   }
   .page-container {
     padding: 0 3%;
-    height: 200vh;
+    /* height: 200vh; */
   }
 }
 

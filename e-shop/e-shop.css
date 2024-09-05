@@ -8,17 +8,20 @@ body{
 h1{
   color: green;
 }
+.Geschäft{
+  text-decoration: none;
+}
 .banner {
-      background-color: green;
-      color: white;
-      display: flex;
-      padding: 10px;
-      justify-content: space-between;
+  background-color: green;
+  color: white;
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
 }
 .select {
-      background-color: green;
-      border: none;
-      color: white;
+  background-color: green;
+  border: none;
+  color: white;
 }
 .save{
   margin-bottom: 7px;
@@ -51,20 +54,24 @@ h1{
   cursor: pointer;
 }
 .phone-icon {
-      width: 20px;
+  width: 20px;
 }
 .phone-section {
-      display: flex;
-      gap: 8px;
+  display: flex;
+  gap: 8px;
 }
 .head2{
-    display: flex;
-    /* gap: 75px; */
-    justify-content: space-between;
-    padding: 15px;   
+  display: flex;
+  /* gap: 75px; */
+  justify-content: space-between;
+  padding: 15px;   
 }
 .save{
-    width: 15px;
+  width: 15px;
+}
+.link{
+  text-decoration: none;
+  color: black;
 }
 .heart-icon {
     width: 20px;
@@ -180,6 +187,17 @@ h3{
 .items , .items2{
   display: flex;
   margin-bottom: 20px;
+}
+.items{
+  animation: appear 3s linear;
+}
+@keyframes appear{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
 }
 .search-icon{
   width: 20px;
