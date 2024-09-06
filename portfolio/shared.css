@@ -41,7 +41,6 @@
 .open-menu {
   top: 50%;
   right: 20px;
-  /* transform: translate(50%); */
 }
 .close-menu {
   top: 20px;
@@ -106,7 +105,6 @@ a {
   color: var(--main-font-color);
 }
 .footer{
-  color: var(--second-color);
   font-family: "poppins";
   font-size: 18px;
   font-style: normal;
@@ -151,7 +149,8 @@ margin-top: 40px;
 padding: 10px;
 }
 .open-menu , .close-menu {
-display: block;
+display: flex;
+margin-bottom: 15px;
 }
 #check:checked ~ .menu {
 right: 0;

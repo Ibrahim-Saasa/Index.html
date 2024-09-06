@@ -6,8 +6,12 @@
 
 body {
     font-family: "Poppins", sans-serif;
-    color: var(--main-font-color);
-    background-color: var(--main-color);
+    color: white;
+    background-image: linear-gradient(
+      to bottom right,
+      navy,
+      black
+    );
   }
 
 .page-container {
@@ -30,12 +34,35 @@ body {
     grid-template-columns: repeat(3,1fr);
     column-gap: 20px;
     justify-content: center;
-    align-items: center;       
+    align-items: center;   
+    margin-bottom: -150px;   
   }
 
   .img-container{
     width: 200px;
   } 
+  .aa{
+    animation: 3s slide-in ease-out; 
+  }
+  .ab{
+    animation: 3s slider ease-out;
+  }
+  @keyframes slider{
+    from{
+      transform: translateX(500%);
+    }
+    to{
+      transform: translateX(0%);
+    }
+  }
+  @keyframes slide-in {
+    from{
+      transform: translateX(-500%);
+    }
+    to{
+      transform: translateX(0);
+    }
+  }
 
   .img-container img{
     width: 100%;
@@ -63,11 +90,20 @@ body {
  }
 
  hr {
-  border-color : var(--second-color);
-  margin-bottom: 75px;
+  border-color : navy;
+  margin-bottom: 5px;
   border-radius: 5px;
   width: 75%;
   margin-left: 10%;
   align-items: center;
   justify-content: center;
+}
+@media only screen and (max-width: 768px) {
+  .items-container{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin-left: 400px;
+    margin-bottom: -100px;
+  }
 }
