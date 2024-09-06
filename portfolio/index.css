@@ -102,7 +102,7 @@ body {
   }
   .img::before{
     filter: blur(1.5rem);
-    opacity: 0.5;
+    opacity: 1;
 
   }
   @keyframes spin{
@@ -216,17 +216,25 @@ h3 {
 }
 
 @media only screen and (max-width: 768px) {
+  body{
+    /* height: 100vh; */
+    background-repeat: no-repeat;
+  }
+  .intro {
+    width: 300px;
+  }
   .main {
     flex-direction: column;
-    /* display: flex; */
+    display: inline;
 }
   .img {
     order: 1;
     width: 150px;
+    margin-top: 10px;
   }
-  /* .text-main {
+  .text-main {
     order: 2;
-  } */
+  }
   .btn-container {
     order: 3;
   }
@@ -235,7 +243,6 @@ h3 {
   }
   .page-container {
     padding: 0 3%;
-    /* height: 200vh; */
   }
 }
 
