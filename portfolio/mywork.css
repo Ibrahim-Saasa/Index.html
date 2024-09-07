@@ -12,6 +12,8 @@ body {
       navy,
       black
     );
+    background-repeat: no-repeat;
+    height: 100vh;
   }
 
 .page-container {
@@ -67,14 +69,6 @@ body {
   .img-container img{
     width: 100%;
 
-  }
-
-  :root {
-    --main-color: #071e2e;
-    --main-font-color: white;
-    --padding: 20px;
-    --normal-text-size: 16px;
-    --second-color: #03afed;
   }
 
 .work {

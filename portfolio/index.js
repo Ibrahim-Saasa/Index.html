@@ -1,11 +1,10 @@
 let checkbox = document.getElementById("mod-theme");
-function changeStyle() {
-  if (checkbox.checked) {
-    // change the style
-    document.body.style.color = "black";
-    document.documentElement.style.setProperty("--main-color", "black");
+checkbox.addEventListener("change",()=>{
+if (checkbox.checked) {
+    document.body.style.color = "white";
+    document.documentElement.style.setProperty("--my-gradient", "black");
   } else {
     document.body.style.color = "white";
-    document.documentElement.style.setProperty("--main-color", "#071e2e");
+    document.documentElement.style.setProperty("black", "--my-gradient");
   }
-}
+}) 

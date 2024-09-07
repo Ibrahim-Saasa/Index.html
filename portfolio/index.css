@@ -11,6 +11,13 @@
     position: relative;
     width: max-content;
 }
+:root{
+  --my-gradient: linear-gradient(
+    to bottom,
+    blue,
+    aqua
+  );
+}
 .intro::after{
   content: "";
   background: linear-gradient(to right, aqua,rgb(28, 28, 117), aqua );
@@ -27,12 +34,13 @@
 }
 body {
     font-family: "Poppins", sans-serif;
-    color: var(--main-font-color);
-    background-image: linear-gradient(
+    color: white;
+    /* background-image: linear-gradient(
       to bottom,
       blue,
       aqua
-    );
+    ); */
+    background: var(--my-gradient);
   }
   #mod-theme{
     display: none;
@@ -46,6 +54,7 @@ body {
     padding: 3px;
     position: relative;
     transition: all 2s linear;
+    margin-left: 15px;
   }
   .mod-theme::after {
     content: "";
@@ -81,6 +90,7 @@ body {
     position: relative;
     height: 200px;
     width: auto;
+    margin-left: 5px;
   }
   @property --angle{
     syntax: "<angle>";
@@ -125,8 +135,6 @@ body {
   .me{
     height: 200px;
     width: auto;
-    /* border: 2px solid aqua; */
-    /* position: relative; */
   }
   
 
@@ -165,7 +173,6 @@ body {
   .btn-container {
     display: flex;
     gap: 20px;
-    margin-top: 60px;
 
   }
   .btn {
@@ -247,8 +254,7 @@ h3 {
 }
 
 hr {
-  border-color : var(--second-color);
+  border-color : blue;
   margin-top: 75px;
   margin-bottom: 15px;
-  
 }
