@@ -37,7 +37,7 @@ h1{
   padding: 10px;
   cursor: pointer;
   border-radius: 50px;
-  margin-left: 500%;
+  margin-left: 1000%;
 }
 .options , .sortby{
   margin: 15px;
@@ -121,11 +121,11 @@ h1{
     display: flex;
 }
 .center{
-  width: 1200px;
+  width: 95%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-left: 5%;  
+  margin-left: 35px;  
   background-color: rgb(255, 226, 231);
   height: 250x;
 }
@@ -187,6 +187,9 @@ h3{
 .items , .items2{
   display: flex;
   margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+
 }
 .items{
   animation: appear 3s linear;
