@@ -45,21 +45,7 @@ body {
     border: 1px solid lightcoral;
   }
 
-@media only screen and (max-width: 750px) {
-  .main {
-    flex-direction: column;
-    display: flex;
-}
-  .img {
-    order: 1;
-  }
-  .text-main {
-    order: 2;
-  }
-  .page-container {
-    padding: 0 3%;
-  }
-}
+
 
 .contact {
 display: flex;
@@ -201,4 +187,27 @@ hr {
 .last {
   color: lightcoral;
   background-color: lightcoral;
+}
+@media only screen and (max-width: 768px) {
+.box{
+  height: auto;
+  width: 350px;
+}
+.header{
+  width:200px;
+  margin-right: 100px;
+  flex-direction: column;
+}
+.contactme1{
+  justify-content: center;
+  margin-left: 50px;
+}
+.page-container {
+    padding: 0 3%;
+    height: 100%;
+  }
+  body{
+    background-repeat: no-repeat;
+    height: 200vh;
+  }
 }
