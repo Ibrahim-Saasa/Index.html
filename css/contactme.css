@@ -9,15 +9,16 @@
     font-weight: 600;
     line-height: 84px;
 }
-:root{--my-gradient:linear-gradient(
+:root{--my-gradient: linear-gradient(
   to bottom,
   #D4145A,
   #FBB03B
-);}
+);
+}
 body {
     font-family: "Poppins", sans-serif;
     color: white;
-    background:var(--my-gradient)
+    background: var(--my-gradient);
   }
 
   .btn-container {
