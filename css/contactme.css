@@ -3,17 +3,24 @@
     padding: 0;
     margin: 0;
 }
-.intro{
-    font-size: 64px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 84px;
-}
 :root{--my-gradient: linear-gradient(
   to bottom,
   #D4145A,
   #FBB03B
 );
+}
+.intro{
+  position: relative;
+}
+.intro::after{
+  position: absolute;
+  border-radius: 10px;
+  background: linear-gradient(to right, #FBB03B, #FF512F, #FBB03B, #FF512F);
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  content: "";
+  width: 100%;
 }
 body {
     font-family: "Poppins", sans-serif;
@@ -44,9 +51,6 @@ body {
     color: lightcoral;
     border: 1px solid lightcoral;
   }
-
-
-
 .contact {
 display: flex;
 padding: 35px 24px;    
@@ -157,7 +161,7 @@ textarea {
 
 @keyframes show {
     from {
-        opacity: 0;
+        opacity: 1;
         transform: translateY(-10px);
     }
 
@@ -208,6 +212,6 @@ hr {
   }
   body{
     background-repeat: no-repeat;
-    height: 200vh;
+    height: 100%;
   }
 }
