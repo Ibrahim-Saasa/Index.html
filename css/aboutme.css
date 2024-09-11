@@ -55,18 +55,46 @@ height: 100%;
   order: 1;
   align-items: center;
   width: 217px;
-  height: 294px;
+  height: 290px;
   flex-shrink: 0;
-  /* padding-bottom: 64px;
-  padding-top: 64px; */
-  border: 2px solid yellow;
   border-radius: 5px;
-  animation: move 2s;
-  animation-timing-function: ease-in;
-  margin-top: 24px;
-  margin-bottom: 24px;
+  padding-bottom: -20px;
 }
-
+.img{
+  position: relative;
+  margin-bottom: 25px
+}
+@property --angle{
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+.img::after, .img::before{
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(from var(--angle),#e4d934, #e4d934);
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 5px;
+  animation: 5s spin linear infinite;
+  border-radius: 5px;
+}
+.img::before{
+  filter: blur(1rem);
+  opacity: 1;
+}
+@keyframes spin{
+  from{
+    --angle:0deg;
+  }
+  to{
+    --angle:360deg;
+  }
+}
 .btn-container {
   display: flex;
   gap: 20px;

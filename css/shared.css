@@ -16,6 +16,9 @@
   border-radius: 20px;
   border: 1px solid rgba(255,255,255,0.1);
 }
+.darkmode {
+  --my-gradient: black;
+}
 .menu {
   display: flex;
 }
@@ -154,14 +157,14 @@ justify-content: center;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 50%;
+  width: 100%;
   height: 100vh;
   position: fixed;
   top: 0;
   right: -100%;
   z-index: 100;
-  background: linear-gradient(135deg, rgba(255,255,255,0.5), rgba(255,255,255, 0.5));
-  backdrop-filter: blur(10px);
+  background: linear-gradient(to bottom right, lightcoral, rgb(255, 206, 115), rgb(255, 255, 148), lightgreen, skyblue, rgb(192, 113, 192), pink);
+  backdrop-filter: blur(50%);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 20px;
   border: 1px solid rgba(255,255,255,0.1);
@@ -172,6 +175,7 @@ margin-top: 40px;
 }
 .menu li a {
 padding: 10px;
+color: #101010;
 }
 .open-menu , .close-menu {
 display: flex;
