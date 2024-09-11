@@ -14,11 +14,14 @@ const disableDrakmode = () => {
 if(darkmode === "active") enableDarkmode()
 
 checkbox.addEventListener("change",()=>{
-if (checkbox.checked) {
-    document.body.style.color = "white";
-    document.documentElement.style.setProperty("--my-gradient", "black");
-  } else {
-    document.body.style.color = "white";
-    document.documentElement.style.setProperty("black", "--my-gradient");
-  }
+  darkmode = localStorage.getItem('darkmode')
+  darkmode !== "active" ? enableDarkmode() : disableDrakmode()
+
+// if (checkbox.checked) {
+//     document.body.style.color = "white";
+//     document.documentElement.style.setProperty("--my-gradient", "black");
+//   } else {
+//     document.body.style.color = "white";
+//     document.documentElement.style.setProperty("black", "--my-gradient");
+//   }
 }) 
