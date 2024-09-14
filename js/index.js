@@ -25,3 +25,19 @@ checkbox.addEventListener("change",()=>{
 //     document.documentElement.style.setProperty("black", "--my-gradient");
 //   }
 }) 
+
+const burgerBtn = document.getElementById("burger");
+const closeBtn = document.getElementById("close-svg");
+
+const nav_bar = document.querySelector(".nav-bar");
+burgerBtn.addEventListener("click", () => {
+  nav_bar.classList.toggle("open");
+  burgerBtn.style.display = "none";
+  closeBtn.style.display = "block";
+});
+
+closeBtn.addEventListener("click", () => {
+  nav_bar.classList.toggle("open");
+  burgerBtn.style.display = "block";
+  closeBtn.style.display = "none";
+});

@@ -19,13 +19,13 @@
 .darkmode {
   --my-gradient: black;
 }
-.menu {
+.nav-bar {
   display: flex;
 }
-.menu li {
+.nav-bar li {
   padding-left: 30px;
 }
-.menu li a {
+.nav-bar li a {
   display: inline-block;
   text-decoration: none;
   color:white ;
@@ -33,24 +33,22 @@
   position: relative;
   text-transform: uppercase;
 }
-.open-menu , .close-menu {
-  position: absolute;
-  color: white;
-  cursor: pointer;
-  font-size: 1.5rem;
-  display: none;  
-}
-.open-menu {
-  top: 20px;
-  right: 20px;
-}
-.close-menu {
-  top: 20px;
-  right: 20px;
-}
-#check {
+.burger{
+  width: 30px;
   display: none;
+  cursor: pointer;
+}
+#close-svg {
+  height: 100%;
+  width: 100%;
+  display: none;
+  cursor: pointer;
+}
 
+#close-svg img {
+  width: 30px;
+  right: 100%;
+  height: 100%;
 }
  nav a:hover {
   transform: scale(1) ease-in-out 5s;
@@ -143,42 +141,37 @@ justify-content: center;
   top: 5px;
 }
 @media only screen and (max-width: 768px) {
-.menu {
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: max-content;
-  position: fixed;
-  top: 0;
-  right: -100%;
-  z-index: 100;
-  background: linear-gradient(to bottom right, lightcoral, rgb(255, 206, 115), rgb(255, 255, 148), lightgreen, skyblue, rgb(192, 113, 192), pink);
-  backdrop-filter: blur(90%);
-  -webkit-backdrop-filter: blur(50px);
-  border-radius: 25px;
-  border: 1px solid rgba(255,255,255,0.1);
-  transition: all 0.2s ease-in-out;
-}
-.menu li {
-margin-top: 40px;
-}
-.menu li a {
-padding: 2px;
-color: #101010;
-}
-.open-menu , .close-menu {
-display: flex;
-margin-bottom: 15px;
-}
-#check ~ .menu {
-  margin-left: -5px;
-}
-#check:checked ~ .menu {
-right: 0;
-}
-#check:checked ~ .open-menu{
+  .burger {
+    display: block;
+  }
+.nav-bar {
   display: none;
+  position: relative;
+  width: 100%;
+  justify-content: center;
+  align-items: center; 
+  gap: 25px;
+}
+
+.navbar {
+  height: 100%;
+  padding: 0;
+  width: 100%;
+  padding: 30px 0;
+  display: flex;
+  /* gap: 20%; */
+}
+
+.nav-bar.open {
+  display: flex;
+  flex-direction: column;
+ 
+} 
+.nav-bar li {
+margin-top: 20px;
+}
+.nav-item a{
+  color: black;
 }
 .mod-theme {
   margin-top: 40px;
