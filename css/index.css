@@ -14,9 +14,10 @@
 }
 :root{
   --my-gradient: linear-gradient(
-    to bottom,
+    to bottom right,
+    rgb(67, 67, 254),
     blue,
-    aqua
+    rgb(43, 43, 205)
   );
 }
 .intro::after{
@@ -140,24 +141,24 @@ body {
   .light-btn {
     background-color: blue;
     color: var(--main-font-color);
-    transition: all 2s;
+    transition: all 1ms;
     cursor: pointer;
   }
   .light-btn:hover {
     background-color: rgb(19, 214, 214);
-    color: var(--second-color);
+    color: blue;
     border: 1px solid var(--second-color);
   }
   
   .dark-btn {
     background-color: rgb(7, 223, 223);
-    color: rgb(72, 72, 243);
+    color: blue;
     border: 1px solid var(--second-color);
-    transition: all 2s;
+    transition: all 1ms;
     cursor: pointer;
   }
   .dark-btn:hover {
-    background-color: var(--second-color);
+    background-color: blue;
     color: var(--main-color);
   }
 
