@@ -187,6 +187,8 @@ h3 {
     background-repeat: no-repeat;
   }
   .intro {
+    font-size: 40px;
+    line-height: 50px;
     width: 300px;
     margin-top: 5px;
   }
