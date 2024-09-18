@@ -16,7 +16,7 @@
   --my-gradient: linear-gradient(
     to bottom right,
     blue,
-    rgb(67, 67, 254),
+    /* rgb(67, 67, 254), */rgb(0, 137, 137),
     blue
   );
 }
