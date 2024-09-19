@@ -44,7 +44,7 @@ body {
     animation: slide-in 2s;
     animation-timing-function: ease-in;
     position: relative;
-    height: 200px;
+    height: 500px;
     width: auto;
     margin-left: 5px;
   }
@@ -89,8 +89,9 @@ body {
   }
 
   .me{
-    height: 200px;
+    height: 500px;
     width: auto;
+    margin-bottom: 70px;
   }
   
 
@@ -178,7 +179,7 @@ h3 {
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: 28px; 
+  line-height: 28px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -196,9 +197,16 @@ h3 {
     flex-direction: column;
     display: inline;
 }
+.me{
+  height: 200px;
+  width: auto;
+}
+
   .img {
     order: 1;
+    height: 200px;
     width: 150px;
+    /* width: 150px; */
     margin-top: 10px;
   }
   .text-main {
@@ -212,6 +220,10 @@ h3 {
   }
   .page-container {
     padding: 0 3%;
+  }
+  .dark-btn , .light-btn{
+    height: 60px;
+    width: 150px;
   }
 }
 
