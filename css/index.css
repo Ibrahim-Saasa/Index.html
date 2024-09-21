@@ -46,7 +46,7 @@ body {
     position: relative;
     height: 500px;
     width: auto;
-    margin-left: 5px;
+    margin-left: 20px;
   }
   @property --angle{
     syntax: "<angle>";
