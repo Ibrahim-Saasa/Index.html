@@ -111,5 +111,6 @@ body {
   }
   .page-container{
     padding: 0 3%;
+    width: 100%;
   }
 }
