@@ -18,6 +18,8 @@ body {
   }
 .page-container {
     padding: 0px 25px;
+    display: flex;
+    flex-direction: column;
     height: 100%;
   }
   
