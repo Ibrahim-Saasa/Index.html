@@ -167,7 +167,9 @@ footer img:hover{
   display: flex;
   /* gap: 20%; */
 }
-
+.nav-bar.open .logo{
+  display: none;
+}
 .nav-bar.open {
   display: flex;
   flex-direction: column;
