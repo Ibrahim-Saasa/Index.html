@@ -43,7 +43,7 @@ closeBtn.addEventListener("click", () => {
 });
 
 function sendToWhattsapp() {
-  let number = "+971554296952";
+  let number = "+918149944253";
 
   let name = document.getElementById('text').value;
   let email = document.getElementById('email').value;
