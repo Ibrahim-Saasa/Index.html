@@ -5,7 +5,7 @@
 }
 :root{--my-gradient: linear-gradient(
   to bottom,
-  #D4145A,
+  #79266f,
   #FBB03B
   
 );
@@ -26,7 +26,7 @@
 body {
     font-family: "Poppins", sans-serif;
     color: white;
-    background: var(--my-gradient);
+    /* background: var(--my-gradient); */
   }
 
   .btn-container {
@@ -65,7 +65,7 @@ gap: 24px;
     border: 2px solid lightcoral;
     background-image: linear-gradient(
       to bottom,
-      #FF512F,
+      #8f387f,
       #DD2476
     );
     width: 498px;

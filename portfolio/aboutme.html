@@ -15,7 +15,7 @@
         rel="stylesheet" />
 </head>
 
-<body>
+<body id="body">
     <div class="page-container">
         <div class="nav">
             <nav class="navbar">
@@ -30,10 +30,7 @@
                     <li class="nav-item"><a href="./mywork.html">Work</a></li>
                     <li class="nav-item"><a href="./contactme.html">Contact</a></li>
                     <li class="nav-item"><a target="_blank" href="./Resume.pdf">Download CV</a></li>
-                    <input type="checkbox" id="mod-theme" />
-                    <label for="mod-theme" class="mod-theme">
-                        <img src="../images/sun.svg" id="sun" />
-                        <img src="../images/moon.svg" id="moon" />
+
                 </ul>
 
                 <div id="close-svg">
@@ -42,9 +39,9 @@
             </nav>
         </div>
         <div class="main">
-            <div class="img">
+            <!-- <div class="img">
                 <img src="../images/ibrahim.jpeg" class="im">
-            </div>
+            </div> -->
             <div class="text-main">
                 <h1 class="intro"> About Me</h1>
                 <p class="me">Hi, I'm Ibrahim Saasa a dedicated web designer and developer with a deep passion for
@@ -129,6 +126,22 @@
         </footer>
 
         <script src="../js/index.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
+        <script>
+            VANTA.FOG({
+                el: "#body",
+                mouseControls: true,
+                touchControls: true,
+                gyroControls: false,
+                minHeight: 200.00,
+                minWidth: 200.00,
+                highlightColor: 0x48a42a,
+                midtoneColor: 0xa79b1a,
+                lowlightColor: 0xb8cfd6,
+                baseColor: 0x0
+            })
+        </script>
 </body>
 
 </html>
