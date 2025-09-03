@@ -1,21 +1,21 @@
-let darkmode = localStorage.getItem('darkmode')
-const checkbox = document.getElementById("mod-theme");
+// let darkmode = localStorage.getItem('darkmode')
+// const checkbox = document.getElementById("mod-theme");
 
-const enableDarkmode = () => {
-  document.body.classList.add('darkmode')
-  localStorage.setItem('darkmode', 'active')
-}
+// const enableDarkmode = () => {
+//   document.body.classList.add('darkmode')
+//   localStorage.setItem('darkmode', 'active')
+// }
 
-const disableDrakmode = () => {
-  document.body.classList.remove('darkmode')
-  localStorage.setItem('darkmode', null)
-}
+// const disableDrakmode = () => {
+//   document.body.classList.remove('darkmode')
+//   localStorage.setItem('darkmode', null)
+// }
 
-if(darkmode === "active") enableDarkmode()
+// if(darkmode === "active") enableDarkmode()
 
-checkbox.addEventListener("change",()=>{
-  darkmode = localStorage.getItem('darkmode')
-  darkmode !== "active" ? enableDarkmode() : disableDrakmode()
+// checkbox.addEventListener("change",()=>{
+//   darkmode = localStorage.getItem('darkmode')
+//   darkmode !== "active" ? enableDarkmode() : disableDrakmode()
 
 // if (checkbox.checked) {
 //     document.body.style.color = "white";
@@ -24,7 +24,7 @@ checkbox.addEventListener("change",()=>{
 //     document.body.style.color = "white";
 //     document.documentElement.style.setProperty("black", "--my-gradient");
 //   }
-}) 
+
 
 const burgerBtn = document.getElementById("burger");
 const closeBtn = document.getElementById("close-svg");
