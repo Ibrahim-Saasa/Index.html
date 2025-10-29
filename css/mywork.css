@@ -3,6 +3,7 @@
   padding: 0;
   margin: 0;
 }
+
 :root{
   --my-gradient: linear-gradient(
       to bottom right,
@@ -10,106 +11,108 @@
       black
     );
 }
+
 body {
-    font-family: "Poppins", sans-serif;
-    color: white;
-    /* background:var(--my-gradient); */
-    margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  margin: 0;
   padding: 0;
-  height: 100%;
-  overflow: hidden;  /* removes scroll */ 
-  }
-  #background {
-  position: fixed;
+
+}
+
+#background {
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
-  z-index: -1; /* keeps it behind everything */
+  height: 100%;
+  min-height: 100%;
+  z-index: -1;
 }
+
+
 .page-container {
-   height: 100vh;              /* fill full viewport */
+  min-height: 100vh;
+  height: auto;
   display: flex;
-  flex-direction: column;  
-  }
+  flex-direction: column;
+}
   
 .main {
-    margin-top: 10px;
-    padding-top: 16px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    /* padding-bottom: 192px; */
-  }
-  .main {
-  flex: 1;                    /* take up middle space */
-  display: flex;
+  margin-top: 10px;
+  padding-top: 16px;
   justify-content: center;
   align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .items-container{  
-    display: grid;
-    width: 600px;
-    grid-template-columns: repeat(3,1fr);
-    column-gap: 20px;
-    justify-content: center;
-    align-items: center;   
-    /* margin-bottom: -150px;    */
-  }
-  .img-container:hover{
-    transform: scale(110%);
-    transition: 0.2s ease-in-out;
-  }
-  .links{
-    width: 25px;
-    display: flex;
-  }
-  .img-container{
-    width: 200px;
-  } 
-  .aa{
-    animation: 3s slide-in ease-out; 
-  }
-  .ab{
-    animation: 3s slider ease-out;
-  }
-  @keyframes slider{
-    from{
-      transform: translateX(500%);
-    }
-    to{
-      transform: translateX(0%);
-    }
-  }
-  @keyframes slide-in {
-    from{
-      transform: translateX(-500%);
-    }
-    to{
-      transform: translateX(0);
-    }
-  }
+  display: grid;
+  width: 600px;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 20px;
+  row-gap: 20px;
+  justify-content: center;
+  align-items: center;   
+}
 
-  .img-container img{
-    width: 100%;
+.img-container:hover{
+  transform: scale(110%);
+  transition: 0.2s ease-in-out;
+}
+
+.links{
+  width: 25px;
+  display: flex;
+}
+
+.img-container{
+  width: 200px;
+} 
+
+.aa{
+  animation: 3s slide-in ease-out; 
+}
+
+.ab{
+  animation: 3s slider ease-out;
+}
+
+@keyframes slider{
+  from{
+    transform: translateX(500%);
   }
+  to{
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slide-in {
+  from{
+    transform: translateX(-500%);
+  }
+  to{
+    transform: translateX(0);
+  }
+}
+
+.img-container img{
+  width: 100%;
+}
+
 .work {
-    align-self: stretch;
-    text-align: center;
-    font-family: "poppins";
-    font-size: 64px;
-    font-style: normal;
-    font-weight: 600;
-    /* line-height: 84px; */
-    /* padding-top: 64px;
-    padding-bottom: 64px; */
- }
+  align-self: stretch;
+  text-align: center;
+  font-family: "poppins";
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 600;
+}
 
- hr {
-  border-color : rgb(0, 128, 79);
+hr {
+  border-color: rgb(0, 128, 79);
   margin-bottom: 5px;
   border-radius: 5px;
   width: 75%;
@@ -117,19 +120,49 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+footer{
+  flex-shrink: 0;
+}
+
 @media only screen and (max-width: 768px) {
+   body {
+    overflow-y: scroll !important;
+    height: auto !important;
+  }
   .items-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: -100px;
+    width: 90%;
+    gap: 20px;
+    margin-bottom: 40px;
   }
+  
   .page-container{
+    overflow-y: scroll !important;
+    height: auto !important;
     padding: 0 3%;
     width: 100%;
+   
   }
-}
-footer{
-  flex-shrink: 0;
+  
+  .work {
+    font-size: 48px;
+  }
+  
+  .img-container {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .main {
+    flex: none !important;
+    height: auto !important;
+    min-height: auto !important;
+    overflow: visible !important;
+    padding-bottom: 100px;
+  }
+
 }
