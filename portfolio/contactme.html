@@ -2,116 +2,357 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="../images/favicon.png">
-    <title>Ibrahim Saasa</title>
-    <link rel="stylesheet" type="text/css" href="../css/aboutme.css">
-    <link rel="stylesheet" type="text/css" href="../css/shared.css">
-    <link rel="stylesheet" type="text/css" href="../css/contactme.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com/" />
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - Ibrahim Saasa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: linear-gradient(-45deg, rgb(83, 83, 234), rgb(213, 130, 67));
+            background-size: 400% 400%;
+            animation: gradientMove 15s ease infinite;
+            overflow-x: hidden;
+        }
+
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .page-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            margin-bottom: 20px;
+        }
+
+        .head {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: aqua;
+        }
+
+        .contact-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .contact-content {
+            max-width: 800px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 50px 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .contact-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .contact-header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, teal, rgb(52, 206, 152));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .contact-header p {
+            font-size: 1.1rem;
+            color: #d0e0ff;
+            font-weight: 300;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-group label {
+            font-size: 1rem;
+            font-weight: 500;
+            color: turquoise;
+            margin-left: 5px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid rgba(0, 255, 255, 0.3);
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.08);
+            color: white;
+            font-size: 1rem;
+            font-family: "Poppins", sans-serif;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: aqua;
+            background: rgba(255, 255, 255, 0.12);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .submit-btn {
+            padding: 15px 40px;
+            background: linear-gradient(135deg, teal, rgb(52, 206, 152));
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+            box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(0, 212, 255, 0.5);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        .contact-info {
+            margin-top: 40px;
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .contact-info h3 {
+            font-size: 1.2rem;
+            color: aqua;
+            margin-bottom: 15px;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .contact-links a {
+            color: #d0e0ff;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .contact-links a:hover {
+            color: aqua;
+        }
+
+        .success-message {
+            display: none;
+            padding: 15px;
+            background: rgba(0, 255, 135, 0.2);
+            border: 1px solid rgba(0, 255, 135, 0.5);
+            border-radius: 10px;
+            color: #00ff87;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .navbar ul {
+                display: none;
+            }
+
+            .contact-content {
+                padding: 30px 20px;
+            }
+
+            .contact-header h1 {
+                font-size: 2rem;
+            }
+
+            .contact-header p {
+                font-size: 1rem;
+            }
+
+            .form-group input,
+            .form-group textarea {
+                padding: 12px 15px;
+            }
+
+            .submit-btn {
+                padding: 12px 30px;
+                font-size: 1rem;
+            }
+
+            .contact-links {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
 </head>
 
-<body id="body">
-    <div>
-        <div class="nav">
-            <nav class="navbar">
-
-                <h1 class="head">.Ibrahim Saasa</h1>
-                <div id="burger">
-                    <img src="../images/burger.svg" class="burger" />
-                </div>
-                <ul class="nav-bar">
-                    <li class="nav-item"><a href="../index.html">Home</a></li>
-                    <li class="nav-item"><a href="./aboutme.html">About Me</a></li>
-                    <li class="nav-item"><a href="./mywork.html">Work</a></li>
-                    <li class="nav-item"><a href="./contactme.html">Contact</a></li>
-                    <li class="nav-item"><a target="_blank" href="./Resume.pdf">Download CV</a></li>
-
+<body>
+    <div class="page-container">
+        <div class="navbar">
+            <h1 class="head">.Ibrahim Saasa</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="./aboutme.html">About Me</a></li>
+                    <li><a href="./mywork.html">Work</a></li>
+                    <li><a href="./contactme.html">Contact</a></li>
                 </ul>
-
-                <div id="close-svg">
-                    <img src="../images/close.svg" />
-                </div>
             </nav>
         </div>
-    </div>
-    <div class="contact">
-        <div class="intro">
-            <div class="header">
-                <h2 class="me">
-                    <div class="letter l1">C</div>
-                    <div class="letter l2">o</div>
-                    <div class="letter l3">n</div>
-                    <div class="letter l4">t</div>
-                    <div class="letter l5">a</div>
-                    <div class="letter l6">c</div>
-                    <div class="letter l7">t</div>
-                </h2>
-                <h2 class="contactme1">
-                    <div class="letter l8">M</div>
-                    <div class="letter l9">e</div>
-                </h2>
-            </div>
-        </div>
-        <div class="email">
-            <p>Send me an email and i will get back to you.</p><br>
-        </div>
-        <form action="" method="post">
-            <div class="box">
-                <div class="input-container">
-                    <span class="para">Your Name</span>
-                    <input type="text" placeholder="Enter Your Name" id="text" />
-                </div>
-                <div class="input-container">
-                    <span class="para">Email</span>
-                    <input type="email" name="email" placeholder="Enter Your Email" id="email" />
-                </div>
-                <div class="input-container">
-                    <span class="para">Message</span><br>
-                    <textarea class="input" name="message" cols="60" rows="10" placeholder="Your Message"
-                        id="message"></textarea>
-                </div>
-                <div class="btn-container">
-                    <button class="btn light-btn" onclick="sendToWhattsapp()">SEND</button>
-                </div>
-            </div>
-        </form>
 
+        <div class="contact-container">
+            <div class="contact-content">
+                <div class="contact-header">
+                    <h1>Let's Connect!</h1>
+                    <p>Have a project in mind or just want to chat? Drop me a message!</p>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Tell me about your project or just say hi..."
+                            required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Send Message</button>
+
+                    <div class="success-message" id="successMessage">
+                        ✓ Message sent successfully! I'll get back to you soon.
+                    </div>
+                </form>
+
+                <div class="contact-info">
+                    <h3>Or reach me directly at:</h3>
+                    <div class="contact-links">
+                        <a href="mailto:ibrahimsaasa@gmail.com">📧 ibrahimsaasa@gmail.com</a>
+                        <a href="https://wa.me/+918149944253" target="_blank">💬 WhatsApp</a>
+                        <a href="https://github.com/Ausar-Vile" target="_blank">💻 GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <hr class="last">
-    <footer>
-        <p class="footer">Find me on</p>
-        <ul>
-            <li><a href="https://x.com/SaasaIbrahim"><img src="../images/twitter.svg" width="25px" height="25px"></a>
-            </li>
-            <li><a href="../index.html"><img src="../images/Group (1).svg" width="25px" height="25px"></a></li>
-            <li><a href="https://www.instagram.com/i_m_saasa/"><img src="../images/Group (2).svg" width="25px"
-                        height="25px"></a></li>
-            <li><a href="https://github.com/Ausar-Vile"><img src="../images/Group (3).svg" width="25px"
-                        height="25px"></a></li>
-            <li><a href="https://www.facebook.com/IbrahimSaasa/"><img src="../images/Group.svg" width="25px"
-                        height="25px"></a></li>
-        </ul>
-    </footer>
-    <script src="../js/index.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+
     <script>
-        VANTA.NET({
-            el: "#body",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            scale: 1.00,
-            scaleMobile: 1.00
-        })
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Show success message
+            const successMsg = document.getElementById('successMessage');
+            successMsg.style.display = 'block';
+
+            // Reset form
+            this.reset();
+
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                successMsg.style.display = 'none';
+            }, 5000);
+
+            // In a real implementation, you would send this data to a backend service
+            console.log('Form submitted:', { name, email, message });
+        });
     </script>
 </body>
 

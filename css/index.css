@@ -16,7 +16,7 @@
   --my-gradient: linear-gradient(
     to bottom right,
     blue,
-    /* rgb(67, 67, 254), */rgb(0, 137, 114),
+    rgb(0, 137, 114),
     blue
   );
 }
@@ -39,14 +39,14 @@ body {
   color: white;
   margin: 0;
   padding: 0;
-  height: 100% !important;
+  height: 100%;
   overflow: hidden;
-  background: linear-gradient(-45deg, #1a2a6c, #b21f1f, #319d76, #283c86) !important;
+  background: linear-gradient(-45deg, #1a2a6c, #b21f1f, #319d76, #283c86);
   background-size: 400% 400%;
-  animation: gradientMove 15s ease infinite !important;
+  animation: gradientMove 15s ease infinite;
 }
 
-@keyframes gradientMove {
+@keyframes gradientMove{
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
@@ -222,8 +222,7 @@ h3 {
 
 @media only screen and (max-width: 768px) {
   body {
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-    background-attachment: fixed;
+    /* Keep the animated gradient from main body styles */
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -232,86 +231,117 @@ h3 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 100vh; /* ensures it fits the screen */
+    min-height: 100vh;
     margin: 0;
-    padding: 0;
+    padding: 0 15px;
   }
   .main {
-   flex: 1;
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 1rem;
-    padding: 40px 20px 20px 20px; /* reduce bottom padding */
-}
-
-.img img.me {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-  transition: transform 0.3s ease-in-out;
-}
-.img img.me:hover {
-  transform: scale(1.05);
-}
-
-.text-main h1.intro {
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
-}
-
-.text-main h3 {
-  font-weight: 400;
-  font-size: 1.2rem;
-  color: #cfd8dc;
-  margin-bottom: 1rem;
-}
-
-.intro2 {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  font-size: 1rem;
-  color: #d0e0ff;
-}
-
-.btn-container {
-  display: flex;
+    gap: 0.5rem;
+    padding: 20px 15px 15px 15px;
     justify-content: center;
-    padding-bottom: 10px; /* reduced from 40px */
-    margin-bottom: 0;
-}
+  }
 
-.btn.light-btn {
-  background: linear-gradient(135deg, #009688, #004d40);
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 30px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: transform 0.2s ease-in-out;
-}
-.btn.light-btn:hover {
-  transform: scale(1.1);
-}
-footer {
+  .img {
+    height: auto;
+    width: auto;
     margin: 0;
-    padding: 5px 0 10px 0;
+  }
+
+  .img img.me {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease-in-out;
+    margin: 0;
+  }
+  .img img.me:hover {
+    transform: scale(1.05);
+  }
+
+  .text-main {
+    width: 100%;
+    margin: 0;
+  }
+
+  .text-main h1.intro {
+    font-size: 1.6rem;
+    margin: 10px 0 0 0;
+    line-height: 2rem;
+    width: 100%;
+  }
+
+  .text-main h1.intro::after {
+    display: none;
+  }
+
+  .text-main h3 {
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: aqua;
+    margin: 50px 0;
+    padding: 0;
+    line-height: normal;
+  }
+
+  .intro2 {
+    position: static;
+    transform: none;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    font-size: 0.95rem;
+    color: #d0e0ff;
+    line-height: 1.8rem;
+    margin: 10px 0;
+  }
+
+  .btn-container {
+    display: flex;
+    justify-content: center;
+    padding: 15px 0 10px 0;
+    margin: 0;
+  }
+
+  .btn.light-btn {
+    background: linear-gradient(135deg, #009688, #004d40);
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+  }
+  .btn.light-btn:hover {
+    transform: scale(1.05);
+  }
+  
+  footer {
+    margin: 0;
+    padding: 10px 0 15px 0;
   }
   
   hr {
-    margin: 10px auto;
+    margin: 5px auto;
+  }
+
+  footer ul {
+    justify-content: center;
+    gap: 20px;
+    margin-top: 8px;
   }
 }
 
 @supports (padding: env(safe-area-inset-bottom)) {
   body {
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-    background-attachment: fixed;
+    /* Removed conflicting background that was overriding the animated gradient */
     padding-bottom: env(safe-area-inset-bottom);
   }
 }
