@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="/css/shared.css">
     <style>
         * {
             box-sizing: border-box;
@@ -49,7 +50,7 @@
             padding: 20px;
         }
 
-        .navbar {
+        /* .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -77,7 +78,7 @@
 
         nav a:hover {
             color: aqua;
-        }
+        } */
 
         .contact-container {
             flex: 1;
@@ -274,15 +275,25 @@
 
 <body>
     <div class="page-container">
-        <div class="navbar">
-            <h1 class="head">.Ibrahim Saasa</h1>
-            <nav>
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="./aboutme.html">About Me</a></li>
-                    <li><a href="./mywork.html">Work</a></li>
-                    <li><a href="./contactme.html">Contact</a></li>
+        <div class="nav">
+            <nav class="navbar">
+
+                <h1 class="head">.Ibrahim Saasa</h1>
+                <div id="burger">
+                    <img src="../images/burger.svg" class="burger" />
+                </div>
+                <ul class="nav-bar">
+                    <li class="nav-item"><a href="../index.html">Home</a></li>
+                    <li class="nav-item"><a href="./aboutme.html">About Me</a></li>
+                    <li class="nav-item"><a href="./mywork.html">Work</a></li>
+                    <li class="nav-item"><a href="./contactme.html">Contact</a></li>
+                    <li class="nav-item"><a target="_blank" href="./Resume.pdf">Download CV</a></li>
+
                 </ul>
+
+                <div id="close-svg">
+                    <img src="../images/close.svg" />
+                </div>
             </nav>
         </div>
 
