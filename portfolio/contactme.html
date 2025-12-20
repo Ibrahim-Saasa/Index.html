@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="/css/shared.css">
+    <link rel="stylesheet" href="../css/shared.css">
     <style>
         * {
             box-sizing: border-box;
@@ -239,8 +239,73 @@
         }
 
         @media only screen and (max-width: 768px) {
+            body {
+                animation: gradientMove 10s ease infinite;
+            }
+
+            @keyframes gradientMove {
+                0% {
+                    background-position: 0% 50%;
+                }
+
+                50% {
+                    background-position: 100% 50%;
+                }
+
+                100% {
+                    background-position: 0% 50%;
+                }
+            }
+
+            #close-btn {
+                position: absolute !important;
+                top: 12px;
+                right: 12px;
+                cursor: pointer;
+            }
+
+            .navbar {
+                position: relative;
+            }
+
             .navbar ul {
-                display: none;
+                /* display: none; */
+                flex-direction: column;
+                top: 15px;
+                background: linear-gradient(-45deg, rgb(83, 83, 234), rgb(213, 130, 67));
+                padding: 20px 30px;
+                border-radius: 16px;
+                position: fixed !important;
+                z-index: 9999;
+
+            }
+
+            .nav-bar {
+                /* display: none;
+                flex-direction: column;
+                position: fixed;
+                top: 70px;
+                right: 20px;
+
+                background: rgba(0, 0, 0, 0.1);
+                padding: 20px 30px;
+                border-radius: 16px;
+
+                z-index: 9999; */
+
+            }
+
+            .nav-bar.active {
+                display: flex;
+            }
+
+            .nav-bar li {
+                margin: 15px 0;
+            }
+
+            .nav-bar a {
+                color: white;
+                font-size: 1.1rem;
             }
 
             .contact-content {
@@ -283,6 +348,9 @@
                     <img src="../images/burger.svg" class="burger" />
                 </div>
                 <ul class="nav-bar">
+                    <div id="close-svg">
+                        <img src="../images/close.svg" />
+                    </div>
                     <li class="nav-item"><a href="../index.html">Home</a></li>
                     <li class="nav-item"><a href="./aboutme.html">About Me</a></li>
                     <li class="nav-item"><a href="./mywork.html">Work</a></li>
@@ -291,9 +359,7 @@
 
                 </ul>
 
-                <div id="close-svg">
-                    <img src="../images/close.svg" />
-                </div>
+
             </nav>
         </div>
 
@@ -363,6 +429,22 @@
 
             // In a real implementation, you would send this data to a backend service
             console.log('Form submitted:', { name, email, message });
+        });
+
+        const burger = document.getElementById("burger");
+        const closeBtn = document.getElementById("close-svg");
+        const navBar = document.querySelector(".nav-bar");
+
+        burger.addEventListener("click", () => {
+            navBar.classList.add("active");
+            burger.style.display = "none";
+            closeBtn.style.display = "block";
+        });
+
+        closeBtn.addEventListener("click", () => {
+            navBar.classList.remove("active");
+            closeBtn.style.display = "none";
+            burger.style.display = "block";
         });
     </script>
 </body>
