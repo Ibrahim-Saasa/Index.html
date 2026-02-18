@@ -106,6 +106,13 @@ footer img:hover{
   
   border-bottom: 1px solid black;
 }
+
+/* particles background fix: keep canvas behind everything */
+#tsparticles canvas {
+  z-index: -1 !important;
+  position: fixed !important;
+}
+
 #mod-theme{
   display: none;
 }

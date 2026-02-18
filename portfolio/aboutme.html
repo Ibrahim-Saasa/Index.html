@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="../images/favicon.png">
     <title>Ibrahim Saasa</title>
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
     <link rel="stylesheet" type="text/css" href="../css/aboutme.css">
     <link rel="stylesheet" type="text/css" href="../css/shared.css">
     <link rel="preconnect" href="https://fonts.googleapis.com/" />
@@ -126,21 +127,23 @@
         </footer>
 
         <script src="../js/index.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
+        <!-- replaced Vanta with tsParticles for a cleaner background -->
+        <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
         <script>
-            VANTA.FOG({
-                el: "#body",
-                mouseControls: true,
-                touchControls: true,
-                gyroControls: false,
-                minHeight: 200.00,
-                minWidth: 200.00,
-                highlightColor: 0x48a42a,
-                midtoneColor: 0xa79b1a,
-                lowlightColor: 0xb8cfd6,
-                baseColor: 0x0
-            })
+            tsParticles.load("body", {
+                fullScreen: { enable: true },
+                particles: {
+                    number: { value: 40 },
+                    color: { value: "#ffffff" },
+                    shape: { type: "circle" },
+                    opacity: { value: 0.15 },
+                    size: { value: 2 },
+                    move: { enable: true, speed: 0.8, random: true, outModes: "out" }
+                },
+                interactivity: {
+                    events: { onHover: { enable: true, mode: "repulse" } }
+                }
+            });
         </script>
 </body>
 

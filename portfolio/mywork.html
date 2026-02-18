@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="icon" type="image/png" href="../images/favicon.png">
   <title>Ibrahim Saasa</title>
+  <link rel="stylesheet" type="text/css" href="../css/index.css">
   <link rel="stylesheet" type="text/css" href="../css/mywork.css">
   <link rel="stylesheet" type="text/css" href="../css/shared.css">
   <link rel="preconnect" href="https://fonts.googleapis.com/" />
@@ -105,16 +106,23 @@
     </div>
   </div>
   <script src="../js/index.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.topology.min.js"></script>
+  <!-- tsParticles background -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
   <script>
-    VANTA.TOPOLOGY({
-      el: "#background",
-      minHeight: window.innerHeight,
-      minWidth: window.innerWidth,
-      scaleMobile: 1.00,
-      scale: 1.00
-    })
+    tsParticles.load("body", {
+      fullScreen: { enable: true },
+      particles: {
+        number: { value: 60 },
+        color: { value: "#ffffff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.1 },
+        size: { value: 2.5 },
+        move: { enable: true, speed: 1.2, random: true, outModes: "out" }
+      },
+      interactivity: {
+        events: { onHover: { enable: true, mode: "grab" } }
+      }
+    });
   </script>
 </body>
 

@@ -13,12 +13,30 @@
     margin-top: -50px;
 }
 :root{
-  --my-gradient: linear-gradient(
-    to bottom right,
-    blue,
-    rgb(0, 137, 114),
-    blue
-  );
+  /* color palette variables */
+  --bg1: #1a2a6c;
+  --bg2: #b21f1f;
+  --bg3: #319d76;
+  --bg4: #283c86;
+  --text: #fff;
+  --accent: aqua;
+  --btn-bg: #009688;
+  --btn-fg: #fff;
+  --main-font-color: var(--text);
+  --my-gradient: linear-gradient(to bottom right, blue, rgb(0, 137, 114), blue);
+}
+
+/* light theme overrides */
+body.light {
+  --bg1: #ffffff;
+  --bg2: #e3e3e3;
+  --bg3: #cccccc;
+  --bg4: #bbbbbb;
+  --text: #111;
+  --accent: #007acc;
+  --btn-bg: #004d40;
+  --btn-fg: #fff;
+  --main-font-color: var(--text);
 }
 .intro::after{
   content: "";
@@ -36,14 +54,15 @@
 }
 body {
   font-family: "Poppins", sans-serif;
-  color: white;
+  color: var(--main-font-color);
   margin: 0;
   padding: 0;
   height: 100%;
   overflow: hidden;
-  background: linear-gradient(-45deg, #1a2a6c, #b21f1f, #319d76, #283c86);
+  background: linear-gradient(-45deg, var(--bg1), var(--bg2), var(--bg3), var(--bg4));
   background-size: 400% 400%;
   animation: gradientMove 15s ease infinite;
+  transition: background 0.5s, color 0.5s;
 }
 
 @keyframes gradientMove{
@@ -61,12 +80,15 @@ body {
     align-items: center;
     justify-content: center;
     margin-left: 20px;
-  }
-  @property --angle{
+}
+  
+@property --angle{
     syntax: "<angle>";
     initial-value: 0deg;
     inherits: false;
-  }
+  
+
+ }
 /* .img::after, .img::before{
     content: "";
     position: absolute;
@@ -80,11 +102,12 @@ body {
     padding: 5px;
     animation: 5s spin linear infinite;
   } */
-  .img::before{
+  
+.img::before{
     filter: blur(1.5rem);
     opacity: 1;
 
-  }
+}
   /* @keyframes spin{
     from{
       --angle:0deg;
@@ -360,3 +383,68 @@ hr {
     .intro2 span {
       display: block;
     }
+
+/* theme toggle button */
+.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  background: var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  transition: background 0.3s;
+}
+.theme-toggle span {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+body.light .theme-toggle {
+  background: var(--accent);
+}
+
+
+/* card grid for skills */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px,1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+.card {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 1rem;
+  padding: 1rem;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .4s, transform .4s;
+}
+.card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* optional mono feel for typewriter intro */
+.intro {
+  font-family: "Courier New", monospace;
+}
+.typing {
+  font-family: "Courier New", monospace;
+  font-size: 2rem;
+  margin-top: 0.25rem;
+  min-height: 2.5rem; /* reserve space during typing */
+}
+
+.section-title {
+  text-align: center;
+  margin: 2rem 0 1rem;
+  font-size: 2rem;
+  color: var(--accent);
+}

@@ -17,17 +17,20 @@
 </head>
 
 <body id="body">
+  <div class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+    <span id="themeIcon">☀️</span>
+  </div>
   <div class="page-container">
     <div class="nav mobile-menu">
       <nav class="navbar">
 
         <h1 class="head">.Ibrahim Saasa</h1>
         <div id="burger">
-          <img src="./images/burger.svg" class="burger" />
+          <img src="./images/burger.svg" class="burger" alt="menu" />
         </div>
         <ul class="nav-bar">
           <div id="close-svg">
-            <img src="./images/close.svg" />
+            <img src="./images/close.svg" alt="close menu" />
           </div>
           <li class="nav-item"><a href="./index.html">Home</a></li>
           <li class="nav-item"><a href="./portfolio/aboutme.html">About Me</a></li>
@@ -45,7 +48,9 @@
         <img src="./images/IMS.jpeg" class="me">
       </div>
       <div class="text-main">
-        <h1 class="intro"> Hey There, I'm Ibrahim Saasa</h1>
+        <h1 class="intro">Hey There, I'm Ibrahim Saasa</h1>
+        <!-- rotating job titles below -->
+        <h2 class="typing"></h2>
         <h3>Full-Stack Developer</h3>
         <div class="intro2">
           <span> Fueled by Football ⚽</span>
@@ -55,6 +60,29 @@
         </div>
       </div>
     </div>
+
+    <!-- skills section with scroll-reveal cards -->
+    <section id="skills">
+      <h2 class="section-title">What I Use</h2>
+      <div class="cards">
+        <div class="card"><img src="./images/react.svg" alt="React logo">
+          <p>React</p>
+        </div>
+        <div class="card"><img src="./images/js.svg" alt="JavaScript logo">
+          <p>JavaScript</p>
+        </div>
+        <div class="card"><img src="./images/css3.svg" alt="CSS3 logo">
+          <p>CSS3</p>
+        </div>
+        <div class="card"><img src="./images/html5.svg" alt="HTML5 logo">
+          <p>HTML5</p>
+        </div>
+        <div class="card"><img src="./images/node.svg" alt="Node.js logo">
+          <p>Node.js</p>
+        </div>
+        <!-- add more as desired -->
+      </div>
+    </section>
 
     <div class="btn-container">
       <!-- <a href="mailto:ibrahimsaasa@gmail.com"><button class="btn light-btn">Hire Me</button></a> -->
@@ -78,20 +106,24 @@
     </footer>
   </div>
   <script type="text/javascript" src="./js/index.js"></script>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.halo.min.js"></script>
-
+  <!-- particles background using tsParticles -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
   <script>
-    VANTA.HALO({
-      el: "#body",
-      mouseControls: true,
-      touchControls: true,
-      gyroControls: false,
-      minHeight: 200.00,
-      minWidth: 200.00,
-      amplitudeFactor: 2.50
-    })
-  </script> -->
+    tsParticles.load("body", {
+      fullScreen: { enable: true },
+      particles: {
+        number: { value: 50 },
+        color: { value: "#ffffff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.2 },
+        size: { value: 3 },
+        move: { enable: true, speed: 1, random: true, outModes: "out" }
+      },
+      interactivity: {
+        events: { onHover: { enable: true, mode: "grab" } }
+      }
+    });
+  </script>
 </body>
 
 </html>
